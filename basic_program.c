@@ -13,18 +13,27 @@ int fibonacci(int n)
     else
         return fibonacci(n - 1) + fibonacci(n - 2);
 }
-int isPrime(int n) {
-    if(n <= 1) return 0;
-    for(int i = 2; i*i <= n; i++)
-        if(n % i == 0) return 0;
+int isPrime(int n)
+{
+    if (n <= 1)
+        return 0;
+    for (int i = 2; i * i <= n; i++)
+        if (n % i == 0)
+            return 0;
     return 1;
 }
 // ei file e kichu jinins cnge korlam1
-int nthPrime(int n) {
+// ei file e kichu jinins cnge korlam2
+
+int nthPrime(int n)
+{
     int count = 0, num = 2;
-    while(1) {
-        if(isPrime(num)) count++;
-        if(count == n) return num;
+    while (1)
+    {
+        if (isPrime(num))
+            count++;
+        if (count == n)
+            return num;
         num++;
     }
 }
@@ -41,7 +50,6 @@ int main()
     printf("Fibonacci of %d is %d\n", num, result);
     result = nthPrime(num);
     printf("The %d-th prime number is %d\n", num, result);
-    
 
     return 0;
 }
