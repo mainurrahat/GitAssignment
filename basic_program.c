@@ -6,6 +6,14 @@ int factorial(int n)
     else
         return n * factorial(n - 1);
 }
+int fibonacci(int n)
+{
+    if (n <= 1)
+        return n;
+    else
+        return fibonacci(n - 1) + fibonacci(n - 2);
+}
+
 int main()
 {
     printf("Hello World\n");
@@ -14,5 +22,8 @@ int main()
     scanf("%d", &num);
     int result = factorial(num);
     printf("Factorial of %d is %d\n", num, result);
+    result = fibonacci(num);
+    printf("Fibonacci of %d is %d\n", num, result);
+
     return 0;
 }
