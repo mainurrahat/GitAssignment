@@ -19,7 +19,7 @@ int isPrime(int n) {
         if(n % i == 0) return 0;
     return 1;
 }
-
+// ei file e kichu jinins cnge korlam1
 int nthPrime(int n) {
     int count = 0, num = 2;
     while(1) {
